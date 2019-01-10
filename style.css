@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans;
+  background-color: rgba(26, 31, 24, .8);
+  color: #fff;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 60rem;
+}
+
+.track {
+    display: flex;
+    position: relative;
+    background: rgba(50,50,50,.2);
+}
+.track:not(:last-child) {
+    border-bottom: 1px solid rgba(255,255,255,.8);
+    padding: .4rem 0;
+}
+.track > * {
+    padding: 0 1.2rem;
+}
+.track .time {
+    width: 5rem;
+}
+.track .title,
+.track .artist {
+    flex: 1;
+}
+
+.button {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-size: 2rem;
+    filter: invert(1);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.button.play {
+    background-image: url(https://ionicons.com/ionicons/svg/ios-play.svg);
+}
+.button.pause {
+    background-image: url(https://ionicons.com/ionicons/svg/ios-pause.svg);
+}
