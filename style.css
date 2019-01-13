@@ -9,6 +9,10 @@ html {
   box-sizing: inherit;
 }
 
+body {
+    padding: 0;
+}
+
 ul {
     list-style: none;
     width: 100%;
@@ -50,4 +54,17 @@ ul {
 }
 .button.pause {
     background-image: url(https://ionicons.com/ionicons/svg/ios-pause.svg);
+}
+
+input {
+    width: 100%;
+    border: 0;
+    border-radius: 1rem;
+    height: 2rem;
+    padding: .2rem .6rem;
+}
+input[type='search'] {
+    background: url(https://ionicons.com/ionicons/svg/ios-search.svg) .4rem center no-repeat white;
+    background-size: 1.4rem;
+    padding-left: 2rem;
 }
