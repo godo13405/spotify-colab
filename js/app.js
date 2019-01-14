@@ -13,7 +13,7 @@ if (!accessToken) {
 }
 
 // router 
-const urlParams = new URLSearchParams(window.location.search);
+const urlParams = new URLSearchParams(window.location.search)
 if (urlParams.get('q')) { // search
     // populate the search box
     document.querySelector("input[type='search']").value = urlParams.get('q');
@@ -22,7 +22,6 @@ if (urlParams.get('q')) { // search
     // populate the search suggestions
     const search = api.getData('search', window.location.search + '&type=track,artist,album&limit=10')
         .then(data => {
-            console.log(data);
             htmlTools.inject(htmlTools.searchList(data), ".datalist");
         });
 } else {
