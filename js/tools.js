@@ -5,6 +5,9 @@ const tools = {
         let expires = "expires=" + d.toUTCString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     },
+    deleteCookie: (cname) => {
+        document.cookie = cname + "=;Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+    },
     getCookie: cname => {
         let name = cname + "=";
         let decodedCookie = decodeURIComponent(document.cookie);
