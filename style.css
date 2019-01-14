@@ -102,7 +102,7 @@ input[type='search'] {
   transition: background-color .2s ease-out;
 }
 
-.search:focus, .search:hover {
+.search.active, .search:focus, .search:hover {
   background-color: rgba(17, 17, 17, 0.9);
 }
 
@@ -114,8 +114,9 @@ input[type='search'] {
 
 .datalist {
   overflow: auto;
+  height: 100vh;
   z-index: 1;
-  margin: 0 auto;
+  margin: auto;
   color: #fff;
   padding: .6rem .6rem .6rem 2rem;
   -webkit-transition: padding .2s ease-out, height .2s ease-out, border-width .2s ease-out;
@@ -139,11 +140,38 @@ input[type='search'] {
 }
 
 .datalist li > a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: .4rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.datalist li > a > span {
+  padding: 0 5%;
 }
 
 .datalist li:not(:last-child) > a {
   border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.datalist .art {
+  height: 4rem;
+  width: 4rem;
+  background-color: #ddd;
+  background-image: url("https://ionicons.com/ionicons/svg/ios-musical-notes.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.datalist .art[src=''] {
+  opacity: .6;
+}
+
+.datalist .artists-list .art {
+  border-radius: 100%;
 }
 /*# sourceMappingURL=style.css.map */

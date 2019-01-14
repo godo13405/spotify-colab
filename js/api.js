@@ -1,6 +1,4 @@
-import {
-    tools
-} from "./tools.js";
+import tools from "./tools.js";
 
 const api = {
     getLoginURL: (scopes = [
@@ -38,6 +36,4 @@ const api = {
     }
 };
 
-export {
-    api
-};
+export default api;

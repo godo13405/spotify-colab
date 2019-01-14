@@ -1,11 +1,10 @@
 <html>
     <head>
-        <script  type='module' src='js/app.js'></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <form class="search" action="/">
-            <input type="search" placeholder="search" name="q" autocomplete="off" onkeyup="autoSearch()" />
+            <input type="search" placeholder="search" name="q" autocomplete="off" onkeyup="window.autoSearch()" autofocus />
             <ol class="datalist"></ol>
         </form>
         <ul class="queue">
@@ -23,5 +22,6 @@
                 <p class="time">time</p>
             </li>
         </ul>
+        <script async type='module' src='js/app.js'></script>
     </body>
 </html>

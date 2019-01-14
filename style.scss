@@ -88,6 +88,7 @@ input {
     z-index: 1;
     text-align: center;
     transition: background-color .2s ease-out;
+    &.active,
     &:focus,
     &:hover {
         background-color: rgba(#111, .9);
@@ -101,9 +102,11 @@ input {
 }
 
 .datalist {
+    $size: 4rem;
     overflow: auto;
+    height: 100vh;
     z-index: 1;
-    margin: 0 auto;
+    margin: auto;
     color: #fff;
     padding: .6rem .6rem .6rem 2rem;
     transition: padding .2s ease-out, height .2s ease-out, border-width .2s ease-out;
@@ -124,13 +127,36 @@ input {
     }
     li {
         > a{
-            display: block;
+            display: flex;
             padding: .4rem 0;
+            align-items: center;
+            > span {
+                padding: 0 5%;
+            }
         }
         &:not(:last-child) {
             > a {
                 border-bottom: 1px solid rgba(#111, .2);
             }
+        }
+    }
+
+    .art {
+        height: $size;
+        width: $size;
+        background-color: #ddd;
+        background-image: url('https://ionicons.com/ionicons/svg/ios-musical-notes.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        &[src=''] {
+            opacity: .6;
+        }
+    }
+
+    .artists-list {
+        .art {
+            border-radius: 100%;
         }
     }
 }

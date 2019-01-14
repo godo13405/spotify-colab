@@ -41,6 +41,4 @@ const tools = {
         return hash;
     }
 };
-export {
-    tools
-};
+export default tools;
