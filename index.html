@@ -3,8 +3,8 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <form class="search" action="/">
-            <input type="search" placeholder="search" name="q" autocomplete="off" onkeyup="window.autoSearch()" autofocus />
+<form class="search" action="javascript:window.autoSearch()">
+            <input type="search" placeholder="search" name="q" autocomplete="off" onkeyup="window.autoSearch()" onsearch="window.autoSearch()" autofocus />
             <ol class="datalist"></ol>
         </form>
         <ul class="queue">

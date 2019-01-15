@@ -13,7 +13,7 @@ const api = {
             '&scope=' + encodeURIComponent(scopes.join(' ')) +
             '&response_type=token';
     },
-    login: callback => {
+    login: () => {
         let url = api.getLoginURL();
         window.location.replace(url);
         let hash = tools.getHash();

@@ -39,6 +39,15 @@ const tools = {
             hash[temp[0]] = temp[1];
         }
         return hash;
+    },
+    getArt: item => {
+        let art = 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif';
+        if (item.images && item.images.length) {
+            art = item.images[item.images.length - 1].url;
+        } else if (item.album && item.album.images && item.album.images.length) {
+            art = item.album.images[item.album.images.length - 1].url;
+        }
+        return art;
     }
 };
 export default tools;
