@@ -61,14 +61,14 @@ ul {
 }
 
 .button {
-  display: block;
+  display: inline-block;
   height: 50px;
   width: 50px;
   background-size: 2rem;
-  -webkit-filter: invert(1);
-          filter: invert(1);
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .button.play {
@@ -180,5 +180,27 @@ input[type='search'] {
 
 .datalist .artists-list .art {
   border-radius: 100%;
+}
+
+.player-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: .4rem 0;
+  border-top: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.player-controls .button {
+  background-color: #ddd;
+  border-radius: 100%;
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+}
+
+.player-controls .button:hover {
+  background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

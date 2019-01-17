@@ -1,9 +1,20 @@
 import tools from "./tools.js";
 
 const api = {
+    checkLogin: () => {
+        const accessToken = tools.checkCookie('accessToken');
+        if (!accessToken || accessToken == 'undefined') {
+            api.login();
+            return false;
+        } else {
+            return accessToken;
+        }
+    },
     getLoginURL: (scopes = [
                 'user-read-email',
-                'user-read-playback-state'
+                'user-read-private',
+                'streaming',
+                'user-read-birthdate'
             ]
         ) => {
         const CLIENT_ID = 'fee59ad5637848b7821ef076ba4cc8d0',

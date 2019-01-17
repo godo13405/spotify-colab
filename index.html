@@ -1,27 +1,36 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-<form class="search" action="javascript:window.autoSearch()">
-            <input type="search" placeholder="search" name="q" autocomplete="off" onkeyup="window.autoSearch()" onsearch="window.autoSearch()" autofocus />
-            <ol class="datalist"></ol>
-        </form>
-        <ul class="queue">
-            <li class="track">
-                <a class="button play"></a>
-                <img class="cover" src="https://source.unsplash.com/50x50/?music"/>
-                <p class="title">title</p>
-                <p class="artist">artist</p>
-                <p class="time">time</p>
-            </li><li class="track">
-                <a class="button play"></a>
-                <img class="cover" src="https://source.unsplash.com/50x50/?music" />
-                <p class="title">title</p>
-                <p class="artist">artist</p>
-                <p class="time">time</p>
-            </li>
-        </ul>
-        <script async type='module' src='js/app.js'></script>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="search" action="javascript:window.autoSearch()">
+        <input type="search" placeholder="search" name="q" autocomplete="off" onkeyup="window.autoSearch()" onsearch="window.autoSearch()"
+            autofocus />
+        <ol class="datalist"></ol>
+    </form>
+    <ul class="queue">
+        <li class="track">
+            <a class="button play"></a>
+            <img class="cover" src="https://source.unsplash.com/50x50/?music" />
+            <p class="title">title</p>
+            <p class="artist">artist</p>
+            <p class="time">time</p>
+        </li>
+        <li class="track">
+            <a class="button play"></a>
+            <img class="cover" src="https://source.unsplash.com/50x50/?music" />
+            <p class="title">title</p>
+            <p class="artist">artist</p>
+            <p class="time">time</p>
+        </li>
+    </ul>
+    <footer class="player-controls">
+<a class="player-control button play-pause play" href="javascript:playControls.toggle(this)"></a>
+    </footer>
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
+<script type='module' src='js/app.js' defer></script>
+</body>
+
 </html>

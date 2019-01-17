@@ -50,13 +50,13 @@ ul {
 }
 
 .button {
-    display: block;
+    display: inline-block;
     height: 50px;
     width: 50px;
     background-size: 2rem;
-    filter: invert(1);
     background-position: center;
     background-repeat: no-repeat;
+    filter: invert(1);
 
     &.play {
         background-image: url(https://ionicons.com/ionicons/svg/ios-play.svg);
@@ -163,6 +163,25 @@ input {
     .artists-list {
         .art {
             border-radius: 100%;
+        }
+    }
+}
+
+.player-controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: .4rem 0;
+    border-top: 1px solid #fff;
+    background: rgba(#fff, .6);
+    text-align: center;
+    .button {
+        background-color: #ddd;
+        border-radius: 100%;
+        transition: background-color .2s ease-out;
+        &:hover {
+            background-color: #fff;
         }
     }
 }

@@ -1,4 +1,5 @@
 import tools from './tools.js';
+import player from './player.js';
 
 let myTimer = setTimeout(() => {}, 0);
 const htmlTools = {
@@ -34,7 +35,7 @@ const htmlTools = {
         let out = '';
         for (let item of data.items) {
             console.log(item);
-            out += `<li><a href="javascript:addTrack(${item})">`;
+            out += `<li><a href="javascript:addTrack(${item.uri})">`;
             out += `<img src="${tools.getArt(item)}" class="art" />`;
             out += `<span class="name">${item.name}</span>`;
             out += `</a></li>`;
@@ -42,7 +43,8 @@ const htmlTools = {
         return out;
     },
     addTrack: (track) => {
-        console.log(track);
+        console.log('player for ', track);
+        player.instance(track);
     }
 }
 
