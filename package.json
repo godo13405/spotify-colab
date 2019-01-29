@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/godo13405/spotify-colab#readme",
   "dependencies": {
+    "node-vibrant": "^3.2.0-alpha",
     "spotify-sdk": "^1.0.0-beta2",
     "spotify-web-api-js": "^1.1.1"
   }

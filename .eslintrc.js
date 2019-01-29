@@ -6,7 +6,13 @@ module.exports = {
     "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaVersion": 2018,
-        "sourceType": "module"
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
+    },
+    "ecmaFeatures": {
+        "modules": true,
+        "spread": true,
+        "restParams": true
     },
     "rules": {
         "accessor-pairs": "error",
